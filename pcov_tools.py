@@ -431,7 +431,7 @@ if __name__ == '__main__':
 
     #Other Arguments
     OtherArgs = parser.add_argument_group('OTHER')
-    OtherArgs.add_argument("--min_window", help="minimum window size to allow for .esom files", default = 3000)
+    OtherArgs.add_argument("--min_window", help="minimum window size to allow for .esom files", type=int, default = 3000)
     OtherArgs.add_argument("--header", help="write a header in coverage table (will not work natively with CONCOCT)", action='store_true')
     OtherArgs.add_argument("--fix_names", help="attempt to fix scaffold names messed up by SNAP", action='store_true')
     args = parser.parse_args()
